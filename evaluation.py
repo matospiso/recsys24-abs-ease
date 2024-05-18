@@ -1,8 +1,6 @@
 from copy import deepcopy
 import numpy as np
 
-np.random.seed(12345)
-
 
 def recall(topk_ids, true_ids, true_rel):
     hits = np.sum(np.isin(topk_ids, true_ids))

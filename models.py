@@ -1,8 +1,6 @@
 import numpy as np
 import scipy.sparse as sp
 
-np.random.seed(12345)
-
 
 class EASE:
     def __init__(self, l2: float):

@@ -2,7 +2,8 @@ from copy import deepcopy
 import numpy as np
 import scipy.sparse as sp
 
-np.random.seed(12345)
+SEED = 12345
+np.random.seed(SEED)
 
 
 class UserSessionItemDataset:

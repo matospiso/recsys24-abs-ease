@@ -5,11 +5,15 @@ from dataset import get_train_test_matrices
 from evaluation import evaluate, recall, ndcg
 from models import EASE, AbsEASE
 
-np.random.seed(12345)
-
 
 def hyperparameter_selection(dataset, l2s, metric, k, target_value=None):
     train_X, test_X_pos, _, test_y = get_train_test_matrices(dataset, "val", target_ratio=0.8)
+
+    best = {
+        "EASE": (None, 0.),
+        "AbsEASE": (None, 0.),
+    }
+
     for l2 in l2s:
         print(f"L2 {l2}")
         ease = EASE(l2)  # train EASE
@@ -25,7 +29,14 @@ def hyperparameter_selection(dataset, l2s, metric, k, target_value=None):
 
             metrics = evaluate(topk_ids, test_y, metric, target_value=target_value)
             print(f"ndcg @ {k}: {np.mean(metrics)} +- {np.std(metrics) / np.sqrt(len(metrics))}")
+
+            if np.mean(metrics) > best[model_name][1]:
+                best[model_name] = (l2, np.mean(metrics))
+
         print()
+
+    print(f"Best L2: EASE {best['EASE'][0]}, AbsEASE {best['AbsEASE'][0]}")
+    return best
 
 
 def train_and_test_on_split(models, dataset, split, ks, results_dict=None):
