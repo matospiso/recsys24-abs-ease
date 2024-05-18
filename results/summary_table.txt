@@ -1,0 +1,26 @@
+BeerAdvocate
+best L2: EASE 2048.0, AbsEASE 32.0
+
+ndcg @ 50  | Pos     | Pos+Neg |
+EASE          0.1064    0.1052
+AbsEASE       0.1143    0.1123
+std.err       0.0019    0.0019
+
+ndcg @ 500 | Pos     | Pos+Neg |
+EASE          0.2605    0.2571
+AbsEASE       0.2890    0.2837
+std.err       0.0036    0.0036
+
+
+MovieLens
+best L2: EASE 512.0, AbsEASE 16.0
+
+ndcg @ 50  | Pos     | Pos+Neg |
+EASE          0.0774    0.0764
+AbsEASE       0.0825    0.0828
+std.err       0.0006    0.0006
+
+ndcg @ 500 | Pos     | Pos+Neg |
+EASE          0.1875    0.1853
+AbsEASE       0.2140    0.2194
+std.err       0.0015    0.0012
