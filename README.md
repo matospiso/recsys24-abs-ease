@@ -15,8 +15,8 @@ We used two datasets in our experiments:
 2. [BeerAdvocate](https://www.kaggle.com/datasets/thedevastator/1-5-million-beer-reviews-from-beer-advocate)
 
 To recreate the preprocessed datasets, place the raw dataset files (`ratings.csv` for MovieLens, `beer_reviews.csv` for BeerAdvocate) in `./data/` directory and re-run the notebooks:
-- `experimentMovieLens.ipynb` for the MovieLens dataset.
-- `experimentBeerAdvocate.ipynb` for the BeerAdvocate dataset.
+- `preprocessingMovieLens.ipynb` for the MovieLens dataset.
+- `preprocessingBeerAdvocate.ipynb` for the BeerAdvocate dataset.
 Preprocessed datasets (`ratings_processed_DatasetName.csv`) will be saved in the `./data/` directory.
 
 Alternatively, you can download the preprocessed datasets from our [OSF repository](https://osf.io/bjmuv/?view_only=9439f132405b48b2962abd5d0ded0567) and place them in the `./data/` directory.
