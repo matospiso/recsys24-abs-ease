@@ -34,3 +34,19 @@ The results of the experiments are saved in the `./results/` directory.
 - `resultsDatasetName.txt` contains the results of experiments on the dataset.
 - `summary_table.txt` contains the summary of the results as presented in the paper (Table 1).
 - `results.ipynb` plots the extended results (recall of liked items, recall of disliked items, and ndcg) for different values of `k`.
+
+## Online experiment
+Upon interest from the reviewers, we provide extended context for our online experiment conducted on a large international fashion discovery platform in May 2024. 
+We describe the context to the extent permitted by the organization's non-disclosure policy.
+
+**Task**: Personalize the rank of a selection (thousands) of fashion products, i.e., a subset of product category, *optionally* filtered by the user.
+
+**Layout**: Scrollable grid (tens-hundreds of rows, ~5 products in row). Of course, early rows are more important due to their high exposure.
+
+**Training data**: Weighted implicit feedback. Training user-item matrix has $O(10^6)$ users, $O(10^6)$ items, and contains $O(10^7)$ interactions over the historical period used in training. The resulting data-Gram matrix has $O(10^9)$ nonzeros (=density ~0.1%).
+
+**Models**: Baseline = proprietary implementation of [SANSA](https://dl.acm.org/doi/10.1145/3604915.3608827), a sparse variant of [EASE](https://arxiv.org/abs/1905.03375). New variant = absolute value of the baseline model. Retrained *daily*.
+
+**Evaluation**: 7 day A/B test in 50-50 split. Over this period, each variant received roughly 0.5M sessions. We report observed lift in CTR, but we also focus on conversion-related, monetary metrics (cannot disclose).
+
+To visually demonstrate the different behavior of the two variants, we provide additional examples similar to Fig. 3 in the `visual-examples` folder.
