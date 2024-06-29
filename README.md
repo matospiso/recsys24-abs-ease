@@ -49,7 +49,7 @@ An average item is, therefore, directly connected (in the sense of co-occurrence
 To recreate the preprocessed datasets, place the raw dataset files (`ratings.csv` for MovieLens, `beer_reviews.csv` for BeerAdvocate) in `./data/` directory and re-run the notebooks:
 - `preprocessingMovieLens_dense.ipynb` for the MovieLens dataset.
 - `preprocessingBeerAdvocate_dense.ipynb` for the BeerAdvocate dataset.
-Preprocessed datasets (`ratings_processed_DatasetName.csv`) will be saved in the `./data/` directory.
+Preprocessed datasets (`ratings_processed_DatasetName_dense.csv`) will be saved in the `./data/` directory.
 
 There are two experiment notebooks:
 1. `experimentMovieLens_dense.ipynb` - experiment on the MovieLens dataset.
