@@ -47,6 +47,6 @@ We describe the context to the extent permitted by the organization's non-disclo
 
 **Models**: Baseline = proprietary implementation of [SANSA](https://dl.acm.org/doi/10.1145/3604915.3608827), a sparse variant of [EASE](https://arxiv.org/abs/1905.03375). New variant = absolute value of the baseline model. Retrained *daily*.
 
-**Evaluation**: 7 day A/B test in 50-50 split. Over this period, each variant received roughly 0.5M sessions. We report observed lift in CTR, but we also focus on conversion-related, monetary metrics (cannot disclose).
+**Evaluation**: 7 day A/B test in 50-50 split. Over this period, each variant received roughly 0.5M sessions. We report observed 3% lift in CTR (Mann-Whitney p=2e7). Additionally, our experiment focused on conversion-related, monetary metrics (we cannot disclose numbers, but they were in favor of the proposed modifications).
 
 To visually demonstrate the different behavior of the two variants, we provide additional examples similar to Fig. 3 in the `visual-examples` folder.
