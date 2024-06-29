@@ -41,7 +41,7 @@ We describe the context to the extent permitted by the organization's non-disclo
 
 **Task**: Personalize the rank of a selection (thousands) of fashion products, i.e., a subset of product category, *optionally* filtered by the user.
 
-**Layout**: Scrollable grid (tens-hundreds of rows, ~5 products in row). Of course, early rows are more important due to their high exposure.
+**Layout**: Scrollable grid (tens-hundreds of rows, ~5 products in row). Naturally, first several rows receive higher exposure.
 
 **Training data**: Weighted implicit feedback. Training user-item matrix has $O(10^6)$ users, $O(10^6)$ items, and contains $O(10^7)$ interactions over the historical period used in training. The resulting data-Gram matrix has $O(10^9)$ nonzeros (=density ~0.1%).
 
