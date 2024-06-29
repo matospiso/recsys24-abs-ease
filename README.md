@@ -40,6 +40,7 @@ Upon interest from the reviewers, we provide extended context for our online exp
 We describe the context to the extent permitted by the organization's non-disclosure policy.
 
 **Task**: Personalize the rank of a selection (thousands) of fashion products, i.e., a subset of product category, *optionally* filtered by the user.
+- If a user explicitly *dislikes* an item, we would like to hide it, as well as items related to it.
 
 **Layout**: Scrollable grid (tens-hundreds of rows, ~5 products in row). Naturally, first several rows receive higher exposure.
 
