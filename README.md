@@ -57,6 +57,32 @@ There are two experiment notebooks:
 
 To reproduce the results, simply re-run the notebooks. The notebook runs hyperparameter tuning and the main experiment. The results are saved in the `./results/` directory.
 
+### 2. Additional sparse dataset
+We ran the same experiments on [Yelp2018](https://github.com/kuandeng/LightGCN/tree/master/Data/yelp2018) dataset. 
+- We joined the available `train` and `test` splits (these splits use *weak generalization*), and ran the same splitting procedure as in the rest of our experiments (i.e., *strong generalization*). 
+- We did not apply sparsification steps (i.e., same way as we've done it for experiments without sparsification).
+- Moreover, since there are no negative interactions and individual users have tens-hundreds of interactions, we selected users with more than 50 interactions for validation and testing.
+
+#### Dataset statistics
+- 31668 users (of which 4113 are used for validation and 12338 are for testing),
+- 38048 items
+- 2474518 interactions (581810 for training, 468406 for validation and 1424302 for testing).
+- (training) data-Gram matrix has density 0.3% -- i.e., an average item co-occurs with ~100 other items, and hence we expect to see improvement at `k`=100 and above due to the ability of abs(EASE) to utilize longer chains of co-occurence edges.
+
+See `preprocessingYelp.ipynb` for dataset statistics.
+
+#### Evaluation
+We use the same experiment pipeline as in the rest of our experiments, but since the dataset contains only *positive* interactions
+- evaluation of `recall_neg` metric returns `nan` values
+- evaluating only on positive inputs (`pos_inputs`) is the same as evaluating on positive and negative inputs (`pos_neg_inputs`) -- the input sets are identical
+The raw outputs of experiment pipelines were, therefore, simplified to remove duplicate results (see `resultsYelp_processed.txt`)
+
+#### Reproducing the results
+To recreate the preprocessed datasets, place the raw dataset files (`train.txt` and `test.txt` obtained [here](https://github.com/kuandeng/LightGCN/tree/master/Data/yelp2018)) in `./data/yelp2018/` directory and re-run the `preprocessingYelp.ipynb` notebook.
+
+Preprocessed dataset (`ratings_processed_Yelp.csv`) will be saved in the `./data/yelp2018/` directory.
+
+To reproduce the results, simply re-run the notebook `experimentYelp.ipynb`. The notebook runs hyperparameter tuning and the main experiment. The results are saved in the `./results/yelp2018/` directory.
 
 
 ## Online experiment
