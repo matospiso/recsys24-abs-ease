@@ -16,6 +16,8 @@ In our experiments, we used sparsified variants of two well-known datasets:
 
 **Splitting methodology**: we use *strong generalization* in our experiments, i.e. the entire user/session interaction history is assigned to either training, validation or testing split. In particular, we select all users/sessions with 3+ positive and 3+ negative interactions for validation and testing (split in 1:3 ratio). For more details, see individual preprocessing notebooks.
 
+**Preprocessing notes**: We further sparsify interactions in the training split to increase sparsity of item co-occurrence. This is motivated by one of the goals of our experiments: showing that by using absolute value of weights, we are able to recover related even without observing item co-occurrence (we expect larger improvement for higher top-$k$); when co-occurrences are frequent, we expect the models to perform similarly because direct co-occurrences dominate the computed item-item scores. Moreover, for training, we use only *positive* interactions (see Section 3.2 of the paper).
+
 To recreate the preprocessed datasets, place the raw dataset files (`ratings.csv` for MovieLens, `beer_reviews.csv` for BeerAdvocate) in `./data/movielens/` resp. `./data/beeradvocate/` directory and re-run the notebooks:
 - `preprocessingMovieLens.ipynb` for the MovieLens dataset.
 - `preprocessingBeerAdvocate.ipynb` for the BeerAdvocate dataset.
