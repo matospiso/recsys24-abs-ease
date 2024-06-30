@@ -36,7 +36,7 @@ The results of the experiments are saved in the `./results/` directory.
 - `results.ipynb` plots the extended results (recall of liked items, recall of disliked items, and ndcg) for different values of `k`.
 
 ## Additional offline experiments
-We conducted follow-up experiments based on reviewer feedback.
+We conducted follow-up experiments based on reviewers feedback.
 ### 1. Without sparsification
 We ran the same experiments on MovieLens 25M and BeerAdvocate *without applying the sparsity-inducing preprocessing steps*, namely
 - for MovieLens, we did not split user interactions into 24 hour sessions
