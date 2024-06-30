@@ -1,0 +1,55 @@
+two-sided p-values
+
+pos_inputs
+recall_liked_values @ 10: mean(new-baseline) = 0.001384 (p=0.009080)
+recall_disliked_values @ 10: mean(new-baseline) = 0.000362 (p=0.567390)
+ndcg_values @ 10: mean(new-baseline) = 0.002111 (p=0.006918)
+
+recall_liked_values @ 20: mean(new-baseline) = 0.003335 (p=0.000001)
+recall_disliked_values @ 20: mean(new-baseline) = -0.000683 (p=0.434039)
+ndcg_values @ 20: mean(new-baseline) = 0.004122 (p=0.000000)
+
+recall_liked_values @ 50: mean(new-baseline) = 0.007764 (p=0.000000)
+recall_disliked_values @ 50: mean(new-baseline) = 0.002257 (p=0.057812)
+ndcg_values @ 50: mean(new-baseline) = 0.007834 (p=0.000000)
+
+recall_liked_values @ 100: mean(new-baseline) = 0.014601 (p=0.000000)
+recall_disliked_values @ 100: mean(new-baseline) = 0.003615 (p=0.022532)
+ndcg_values @ 100: mean(new-baseline) = 0.012307 (p=0.000000)
+
+recall_liked_values @ 200: mean(new-baseline) = 0.025062 (p=0.000000)
+recall_disliked_values @ 200: mean(new-baseline) = 0.006852 (p=0.001585)
+ndcg_values @ 200: mean(new-baseline) = 0.017862 (p=0.000000)
+
+recall_liked_values @ 500: mean(new-baseline) = 0.053269 (p=0.000000)
+recall_disliked_values @ 500: mean(new-baseline) = 0.017795 (p=0.000000)
+ndcg_values @ 500: mean(new-baseline) = 0.028496 (p=0.000000)
+
+
+pos_neg_inputs
+recall_liked_values @ 10: mean(new-baseline) = 0.001021 (p=0.046446)
+recall_disliked_values @ 10: mean(new-baseline) = -0.000761 (p=0.296359)
+ndcg_values @ 10: mean(new-baseline) = 0.001975 (p=0.011958)
+
+recall_liked_values @ 20: mean(new-baseline) = 0.002023 (p=0.001077)
+recall_disliked_values @ 20: mean(new-baseline) = -0.001270 (p=0.117841)
+ndcg_values @ 20: mean(new-baseline) = 0.003313 (p=0.000026)
+
+recall_liked_values @ 50: mean(new-baseline) = 0.006864 (p=0.000000)
+recall_disliked_values @ 50: mean(new-baseline) = 0.002465 (p=0.057845)
+ndcg_values @ 50: mean(new-baseline) = 0.007084 (p=0.000000)
+
+recall_liked_values @ 100: mean(new-baseline) = 0.012060 (p=0.000000)
+recall_disliked_values @ 100: mean(new-baseline) = 0.004619 (p=0.006157)
+ndcg_values @ 100: mean(new-baseline) = 0.010837 (p=0.000000)
+
+recall_liked_values @ 200: mean(new-baseline) = 0.020536 (p=0.000000)
+recall_disliked_values @ 200: mean(new-baseline) = 0.006460 (p=0.001939)
+ndcg_values @ 200: mean(new-baseline) = 0.015941 (p=0.000000)
+
+recall_liked_values @ 500: mean(new-baseline) = 0.043784 (p=0.000000)
+recall_disliked_values @ 500: mean(new-baseline) = 0.010011 (p=0.000498)
+ndcg_values @ 500: mean(new-baseline) = 0.026589 (p=0.000000)
+
+
+
