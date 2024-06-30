@@ -14,13 +14,13 @@ In our experiments, we used sparsified variants of two well-known datasets:
 1. [MovieLens 25M](https://grouplens.org/datasets/movielens/25m/)
 2. [BeerAdvocate](https://www.kaggle.com/datasets/thedevastator/1-5-million-beer-reviews-from-beer-advocate)
 
-todo split methodology
+**Splitting methodology**: we use *strong generalization* in our experiments, i.e. the entire user/session interaction history is assigned to either training, validation or testing split. In particular, we select all users/sessions with 3+ positive and 3+ negative interactions for validation and testing (split in 1:3 ratio). For more details, see individual preprocessing notebooks.
 
 To recreate the preprocessed datasets, place the raw dataset files (`ratings.csv` for MovieLens, `beer_reviews.csv` for BeerAdvocate) in `./data/movielens/` resp. `./data/beeradvocate/` directory and re-run the notebooks:
 - `preprocessingMovieLens.ipynb` for the MovieLens dataset.
 - `preprocessingBeerAdvocate.ipynb` for the BeerAdvocate dataset.
 
-Preprocessed datasets (`ratings_processed_DatasetName.csv`) will be saved in the `./data/movielens/` resp. `./data/beeradvocate/` directory.
+Preprocessed datasets (`ratings_processed_DatasetName.csv`) will be saved in the `./data/movielens/` resp. `./data/beeradvocate/` directory. Note that preprocessing also marks dataset rows according to which split they belong to.
 
 Alternatively, you can download the preprocessed datasets from our [OSF repository](https://osf.io/bjmuv/?view_only=9439f132405b48b2962abd5d0ded0567) and place them in the `./data/movielens/` resp. `./data/beeradvocate/` directory.
 
