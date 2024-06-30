@@ -10,7 +10,7 @@ pip install -r requirements.txt
 ```
 
 ### Datasets
-We used two datasets in our experiments:
+In our experiments, we used sparsified variants of two well-known datasets:
 1. [MovieLens 25M](https://grouplens.org/datasets/movielens/25m/)
 2. [BeerAdvocate](https://www.kaggle.com/datasets/thedevastator/1-5-million-beer-reviews-from-beer-advocate)
 
@@ -26,7 +26,7 @@ There are two experiment notebooks:
 1. `experimentMovieLens.ipynb` - experiment on the MovieLens dataset.
 2. `experimentBeerAdvocate.ipynb` - experiment on the BeerAdvocate dataset.
 
-To reproduce the results, simply re-run the notebooks. The notebook runs hyperparameter tuning and the main experiment. The experiment is organized as a 2x2 grid, where both EASE and abs(EASE) are evaluated w.r.t. positive-only interactions and positive+negative interactions. The results are saved in the `./results/` directory.
+To reproduce the results, simply re-run the notebooks. The notebook runs hyperparameter tuning and the main experiment. The experiment is organized as a 2x2 grid, where both EASE and abs(EASE) are evaluated w.r.t. positive input interactions and positive+negative input interactions. The results are saved in the `./results/` directory.
 
 ### Results
 The results of the experiments are saved in the `./results/` directory.
