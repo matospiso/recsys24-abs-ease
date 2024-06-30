@@ -2,7 +2,7 @@
 
 This repository contains code used in experiments for the paper "On Interpretability of Linear Autoencoders" submitted to RecSys '24.
 
-## Reproducing the experiments
+## Offline experiments
 ### Environment setup
 Python version: `3.10.14`. To install the required packages, run:
 ```bash
@@ -34,6 +34,30 @@ The results of the experiments are saved in the `./results/` directory.
 - `resultsDatasetName.txt` contains the results of experiments on the dataset.
 - `summary_table.txt` contains the summary of the results as presented in the paper (Table 1).
 - `results.ipynb` plots the extended results (recall of liked items, recall of disliked items, and ndcg) for different values of `k`.
+
+## Additional offline experiments
+We conducted follow-up experiments based on reviewer feedback.
+### 1. Without sparsification
+We ran the same experiments on MovieLens 25M and BeerAdvocate *without applying the sparsity-inducing preprocessing steps*, namely
+- for MovieLens, we did not split user interactions into 24 hour sessions
+- for both datasets, we removed the additional sparsification of training split
+
+In this setting, the density of data-Gram matrix is 1.2% for BeerAdvocate and 2.3% for MovieLens. 
+An average item is, therefore, directly connected (in the sense of co-occurrence) with hundreds of other items. Since short paths are dominant contributors to the resulting item-item scores (see Section 3.2. of the paper), most of the top- $k$ recommendations for $k$ up to hundreds directly result from existing co-occurrence information. For this reason, both variants are roughly equal in terms of recommendation accuracy. The variant with absolute value generally performs very slightly worse, which can be explained by the amplification of numerical errors (without absolute value, random error can cancel out).
+
+#### Reproducing the results
+To recreate the preprocessed datasets, place the raw dataset files (`ratings.csv` for MovieLens, `beer_reviews.csv` for BeerAdvocate) in `./data/` directory and re-run the notebooks:
+- `preprocessingMovieLens_dense.ipynb` for the MovieLens dataset.
+- `preprocessingBeerAdvocate_dense.ipynb` for the BeerAdvocate dataset.
+Preprocessed datasets (`ratings_processed_DatasetName_dense.csv`) will be saved in the `./data/` directory.
+
+There are two experiment notebooks:
+1. `experimentMovieLens_dense.ipynb` - experiment on the MovieLens dataset.
+2. `experimentBeerAdvocate_dense.ipynb` - experiment on the BeerAdvocate dataset.
+
+To reproduce the results, simply re-run the notebooks. The notebook runs hyperparameter tuning and the main experiment. The results are saved in the `./results/` directory.
+
+
 
 ## Online experiment
 Upon interest from the reviewers, we provide extended context for our online experiment conducted on a large international fashion discovery platform in May 2024. 
