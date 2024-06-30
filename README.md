@@ -26,7 +26,7 @@ There are two experiment notebooks:
 1. `experimentMovieLens.ipynb` - experiment on the MovieLens dataset.
 2. `experimentBeerAdvocate.ipynb` - experiment on the BeerAdvocate dataset.
 
-To reproduce the results, simply re-run the notebooks. The notebook runs hyperparameter tuning and the main experiment. The results are saved in the `./results/` directory.
+To reproduce the results, simply re-run the notebooks. The notebook runs hyperparameter tuning and the main experiment. The experiment is organized as a 2x2 grid, where both EASE and abs(EASE) are evaluated w.r.t. positive-only interactions and positive+negative interactions. The results are saved in the `./results/` directory.
 
 ### Results
 The results of the experiments are saved in the `./results/` directory.
@@ -34,6 +34,14 @@ The results of the experiments are saved in the `./results/` directory.
 - `resultsDatasetName.txt` contains the results of experiments on the dataset.
 - `summary_table.txt` contains the summary of the results as presented in the paper (Table 1).
 - `results.ipynb` plots the extended results (recall of liked items, recall of disliked items, and ndcg) for different values of `k`.
+
+### Evaluation metrics
+For each experiment, `resultsDatasetName.txt` contains the output of three evaluation metrics: `nDCG`, `recall_liked`, and `recall_disliked` for top-k thresholds $k \in \{10, 20, 50, 100, 200, 500\}$.
+- `nDCG` denotes normalized discounted cumulative gain (higher values = better)
+- `recall_liked` denotes the recall of liked items (higher values = better)
+- `recall_disliked` denotes the recall of disliked items (lower values = better)
+
+The results contain mean values across all users, while the values after `+/-` denote standard errors of the corresponding metric.
 
 ## Additional offline experiments
 We conducted follow-up experiments based on reviewers feedback.
