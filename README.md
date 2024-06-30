@@ -31,7 +31,7 @@ There are two experiment notebooks:
 
 To reproduce the results, simply re-run the notebooks. The notebooks run hyperparameter tuning and the main experiment. The experiment is organized as a 2x2 grid, where both EASE and abs(EASE) are evaluated w.r.t. positive input interactions and positive+negative input interactions. 
 
-The results are saved in the `./results/beeradvocate/` resp. `./results/movielens/` directory.
+The results are saved in the `./results/movielens/` resp. `./results/beeradvocate/` directory.
 
 ### Evaluation metrics
 For each experiment, `resultsDatasetName.txt` contains the output of three evaluation metrics: `nDCG`, `recall_liked`, and `recall_disliked` for top-$k$ thresholds $k \in \{10, 20, 50, 100, 200, 500\}$.
@@ -78,7 +78,7 @@ Alternatively, you can download the preprocessed datasets from our [OSF reposito
 
 To reproduce the results, simply re-run the notebooks. The notebook runs hyperparameter tuning and the main experiment. 
 
-The results are saved in the `./results/beeradvocate_dense/` resp. `./results/movielens_dense/` directory.
+The results are saved in the `./results/movielens_dense/` resp. `./results/beeradvocate_dense/` directory.
 
 ### 2. Additional sparse dataset
 We ran the same experiments on [Yelp2018](https://github.com/kuandeng/LightGCN/tree/master/Data/yelp2018) dataset. 
@@ -105,6 +105,8 @@ The raw outputs of experiment pipelines were, therefore, simplified to remove du
 To recreate the preprocessed datasets, place the raw dataset files (`train.txt` and `test.txt` obtained [here](https://github.com/kuandeng/LightGCN/tree/master/Data/yelp2018)) in `./data/yelp2018/` directory and re-run the `preprocessingYelp.ipynb` notebook.
 
 Preprocessed dataset (`ratings_processed_Yelp.csv`) will be saved in the `./data/yelp2018/` directory.
+
+Alternatively, you can download the preprocessed datasets from our [OSF repository](https://osf.io/bjmuv/?view_only=9439f132405b48b2962abd5d0ded0567) and place them in the `./data/yelp2018/` directory.
 
 To reproduce the results, simply re-run the notebook `experimentYelp.ipynb`. The notebook runs hyperparameter tuning and the main experiment. 
 
