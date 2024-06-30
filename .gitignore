@@ -163,3 +163,6 @@ cython_debug/
 
 # Mac finder directory settings
 .DS_Store
+
+# ignore data folder
+data/
