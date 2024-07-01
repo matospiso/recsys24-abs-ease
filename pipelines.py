@@ -65,6 +65,10 @@ def train_and_test_on_split(models, dataset, split, ks, results_dict=None):
                 print(f"ndcg @ {k}: {np.mean(ndcg_k)} +- {np.std(ndcg_k) / np.sqrt(len(ndcg_k))}")
 
                 if results_dict is not None:
+                    results_dict[model_name][input_type][k]["recall_liked_values"] = recall_liked_k
+                    results_dict[model_name][input_type][k]["recall_disliked_values"] = recall_disliked_k
+                    results_dict[model_name][input_type][k]["ndcg_values"] = ndcg_k
+
                     results_dict[model_name][input_type][k]["recall_liked"] = (np.mean(recall_liked_k), np.std(recall_liked_k) / np.sqrt(len(recall_liked_k)))
                     results_dict[model_name][input_type][k]["recall_disliked"] = (np.mean(recall_disliked_k), np.std(recall_disliked_k) / np.sqrt(len(recall_disliked_k)))
                     results_dict[model_name][input_type][k]["ndcg"] = (np.mean(ndcg_k), np.std(ndcg_k) / np.sqrt(len(ndcg_k)))
