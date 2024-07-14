@@ -86,13 +86,13 @@ The results are saved in the `./results/movielens_dense/` resp. `./results/beera
 We ran the same experiments on [Yelp2018](https://github.com/kuandeng/LightGCN/tree/master/Data/yelp2018) dataset. 
 - We joined the available `train` and `test` splits (these splits use *weak generalization*), and ran the same splitting procedure as in the rest of our experiments (i.e., *strong generalization*). 
 - We did not apply sparsification steps (i.e., same way as we've done it for experiments without sparsification).
-- Moreover, since there are no negative interactions and individual users have tens-hundreds of interactions, we selected users with more than 50 interactions for validation and testing.
+- Moreover, since there are no negative interactions and individual users have tens-hundreds of interactions, we selected users with more than 30 interactions for validation and testing.
 
 #### Dataset statistics
 - 31668 users (of which 4113 are used for validation and 12338 are for testing),
 - 38048 items
-- 2474518 interactions (581810 for training, 468406 for validation and 1424302 for testing).
-- (training) data-Gram matrix has density 0.3% -- i.e., an average item co-occurs with ~100 other items, and hence we expect to see improvement at $k=100$ and above due to the ability of abs(EASE) to utilize longer chains of co-occurence edges.
+- 1561406 interactions (325096 for training, 305129 for validation and 931181 for testing).
+- (training) data-Gram matrix has density 0.4% -- i.e., an average item co-occurs with ~100 other items, and hence we expect to see improvement at $k=100$ and above due to the ability of abs(EASE) to utilize longer chains of co-occurence edges.
 
 See `preprocessingYelp.ipynb` for dataset statistics.
 
