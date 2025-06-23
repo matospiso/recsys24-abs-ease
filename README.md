@@ -1,6 +1,35 @@
 # RecSys '24: On Interpretability of Linear Autoencoders
 
-This repository contains code used in experiments and supplementary material for the paper "On Interpretability of Linear Autoencoders" submitted to RecSys '24.
+This repository contains the code and supplementary material for the paper **"On Interpretability of Linear Autoencoders"**, presented at the [18th ACM Conference on Recommender Systems (RecSys 2024)](https://recsys.acm.org/recsys24/) in Bari, Italy.
+
+Our work explores how linear autoencoders, particularly EASE, can be interpreted through a graph-theoretic lens, providing insights into their inference behavior and inherent biases.
+
+## 📚 Read the Paper & Poster
+Dive into our RecSys 2024 submission:
+- [**Paper**](https://dl.acm.org/doi/abs/10.1145/3640457.3688179) (Open Access, ACM DL)
+- [**Poster**](poster.pdf) (PDF)
+
+## 📌 Citation
+If you find our work useful, please consider citing the paper:
+```bibtex
+@inproceedings{10.1145/3640457.3688179,
+author = {Spi\v{s}\'{a}k, Martin and Bartyzal, Radek and Hoskovec, Anton\'{\i}n and Pe\v{s}ka, Ladislav},
+title = {On Interpretability of Linear Autoencoders},
+year = {2024},
+isbn = {9798400705052},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3640457.3688179},
+doi = {10.1145/3640457.3688179},
+abstract = {We derive a novel graph-based interpretation of linear autoencoder models easer, slim, and their approximate variants. Contrary to popular belief, we reveal that the weights of these models should not be interpreted as dichotomic item similarity but merely as its magnitude. Consequently, we propose a simple modification that considerably improves retrieval ability in sparse domains and yields interpretable inference with negative inputs, as demonstrated by both offline and online experiments. Experiment codes and extended results are available at https://osf.io/bjmuv/.},
+booktitle = {Proceedings of the 18th ACM Conference on Recommender Systems},
+pages = {975–980},
+numpages = {6},
+keywords = {EASE, Interpretability, Ridge regression, Shallow autoencoders},
+location = {Bari, Italy},
+series = {RecSys '24}
+}
+```
 
 ## Offline experiments
 ### Environment setup
